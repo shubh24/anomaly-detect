@@ -2,7 +2,7 @@ import csv
 import numpy as np
 from matplotlib import pyplot as plt
 
-# implements z score
+# implements modified z score
 
 h = []
 t = []
