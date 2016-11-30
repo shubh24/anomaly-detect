@@ -18,7 +18,9 @@ iqr = q75 - q25
 lower_lim = q25 - 1.5*iqr, 
 upper_lim = q75 + 1.5*iqr
 
-print [i for i in h if i > upper_lim or i < lower_lim]
+# print [i for i in h if i > upper_lim or i < lower_lim]
+print [np.where(h == i) for i in h if i > upper_lim or i < lower_lim]
+# print [t[np.where(h == i)] for i in h if i > upper_lim or i < lower_lim]
 
 plt.figure()
 plt.boxplot(h, whis = 1.5, sym = "*")
