@@ -27,7 +27,7 @@ print 'outliers t vs v according to 3SD method'
 outliers_h = []
 outliers_t = []
 for index, value in enumerate(z_scores):
-    if value > 3:
+    if abs(value) > 3:
     	outliers_t.append(t[index])
     	outliers_h.append(h[index])
     	print t[index], h[index]
