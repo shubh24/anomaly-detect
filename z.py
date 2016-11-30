@@ -30,18 +30,19 @@ res =[]
 
 for index, value in enumerate(z_scores):
     if abs(value) > 3:
-    	outliers_t.append(t[index])
-    	outliers_h.append(h[index])
-    	res.append((t[index], h[index]))
+        outliers_t.append(t[index])
+        outliers_h.append(h[index])
+        res.append((t[index], h[index]))
+        print t[index], h[index]
+
 
 show = sys.argv[0]
 
 if show == "z.py":
-	print t[index], h[index]
 
-	plt.figure()
+    plt.figure()
 
-	plt.plot(outliers_t, outliers_h, 'ro')
-	plt.title('outliers according to z score')
+    plt.plot(outliers_t, outliers_h, 'ro')
+    plt.title('outliers according to z score')
 
-	plt.show()
+    plt.show()
