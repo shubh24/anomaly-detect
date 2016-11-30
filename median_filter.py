@@ -29,4 +29,13 @@ def get_median_filtered(signal, threshold = 4):
 
 arr = get_median_filtered(h)
 
-print np.where(arr == True)
+res = []
+for i in range(0, len(arr)):
+    if arr[i] == True:
+        res.append((t[i], h[i]))
+
+import sys
+show = sys.argv[0]
+
+if show == "median_filter.py":
+    print np.where(arr == True)
