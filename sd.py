@@ -2,6 +2,8 @@ import csv
 import numpy as np
 from matplotlib import pyplot as plt
 
+# implements 2sd and 3sd
+
 h = []
 t = []
 
@@ -18,7 +20,7 @@ std = np.std(np_array)
 
 plt.figure()
 
-plt.plot(t, h)
+plt.plot(t, h, 'bo')
 
 plt.plot(t, [mean] * len(t))
 plt.plot(t, [mean + 2 * std] * len(t))
