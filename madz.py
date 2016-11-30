@@ -35,6 +35,6 @@ for index, value in enumerate(z_scores):
 
 plt.plot(outliers_t, outliers_h, 'ro')
 
-
+plt.title('outliers according to mod z method')
 
 plt.show()
