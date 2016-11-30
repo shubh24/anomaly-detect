@@ -41,4 +41,6 @@ for index, value in enumerate(h):
         print t[index], value
 
 
+plt.title('shows 2SD and 3SD')
+
 plt.show()

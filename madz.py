@@ -20,21 +20,21 @@ std = np.std(np_array)
 
 plt.figure()
 
-z_scores = [(x - mean)/std for x in h]
+z_scores = [(0.6745*(x - mean))/(0.675*std) for x in h]
 
-print 'outliers t vs v according to Z score method'
+print 'outliers t vs v according to mod z method'
 
 outliers_h = []
 outliers_t = []
 for index, value in enumerate(z_scores):
-    if abs(value) > 3:
+    if abs(value) > 3.5:
     	outliers_t.append(t[index])
     	outliers_h.append(h[index])
     	print t[index], h[index]
 
 
 plt.plot(outliers_t, outliers_h, 'ro')
-plt.title('outliers according to z score')
+
 
 
 plt.show()
